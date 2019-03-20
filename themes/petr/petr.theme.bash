@@ -13,7 +13,7 @@ GIT_THEME_PROMPT_SUFFIX="${white}"
 RVM_THEME_PROMPT_PREFIX="|"
 RVM_THEME_PROMPT_SUFFIX="|"
 
-__SEP="${blue}"$'\u25a0'
+__SEP="${cyan}"$'\u25a3'
 
 function prompt_command() {
 	local code=$?
