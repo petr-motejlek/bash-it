@@ -19,7 +19,7 @@ function prompt_command() {
 	local code=$?
 	test "${code}" -ne 0 && code="${red}${code}" || code="${green}${code}"
 
-	PS1="\n${__SEP}${white} \u  ${__SEP}${white} \h  ${__SEP}${white} $(clock_prompt) \n${__SEP} ${bold_white}\w\n${__SEP} ${white}$(scm_prompt_char_info)  ${__SEP} ${white}(\\\$?= ${code}${white}) ${bold_white}\\$ ${white}"
+	PS1="\n${__SEP}${white} \u  ${__SEP}${white} \h  ${__SEP}${white} $(clock_prompt) \n${VIRTUAL_ENV:+${__SEP} ${white}VENV: ${VIRTUAL_ENV} \n}${__SEP} ${bold_white}\w\n${__SEP} ${white}$(scm_prompt_char_info)  ${__SEP} ${white}(\\\$?= ${code}${white}) ${bold_white}\\$ ${white}"
 }
 
 THEME_SHOW_CLOCK_CHAR=${THEME_SHOW_CLOCK_CHAR:-"true"}
